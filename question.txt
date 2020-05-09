@@ -1,8 +1,11 @@
-hi
-today is not cinco de mayo
-it is seis de mayo
-
+first line
+The bill of rights was originally designed to limit the power of the federal government and to prevent the federal government to take away people’s rights and freedoms. “List of protections of peoples civil liberties”
+Civil liberties are freedoms guaranteed to the people to protect us from tyranny (think: our freedom of speech) while Civil rights are the legal rights that protect individuals from discrimination (think: employment discrimination).
 Tension between congress and the president can arise when a president nominates people to jobs like federal judges, supreme court and lower court judges, ambassadors and diplomats, cabinet secretaries, but then the senate confirms them. This can cause some tension from negotiation and compromise. There are some positions that do not require senate confirmation which will lift tension.
+Exclusive powers are those that are granted to a branch that are not given to the other branhces
+Shared powers: two or more branches SHARE a power
+The president appooints justices to the supreme court but the justices have to be confirmed by the senate
+The president is not allowed to declare war even if he is the commander in chief rather congress has the ability to declare war. 
 Judicial appointments are the presidents longest lasting influence because they get that job for life. This is a hugely consequential decision and presidents desperately want to get judges confirmed that they agree with and that will rule in a way that the president will agree with as well.
 The bully pulpit is the idea that because one is president people pay attention to what they say and do.  So presidents have a unique ability to always command the public's attention which they can use to put pressure on congress to make them do what the president wants. 
 State of the union address is where once a year the president gives a speech to congress about what has happened in the country over the last year and what he wants to occur going forward into the future. He wants to get the public on his side to  put pressure on their congressman to support the president. 
@@ -44,9 +47,6 @@ Appropriation committees in the house of representative and in the senate get to
 Earmarks 
 Pork barrel legislation is laws that provide benefits such as  jobs, programs, money back to a congressman’s district.
 Logrolling is an agreement by two or more lawmakers to support each other's bills. (vote trading). “You scratch my back and I'll scratch yours”. 
-
-
-The Necessary and proper clause expands federal power by giving Congress the ability to make laws that are “necessary and proper” for executing their enumerated powers. 
 Enumerated powers are explicitly written in the Constitution
 Implied Powers are not directly written in the Constitution based on necessary and proper clause  
 Brutus NO 1. Argued that power should be held by people in smaller more local governments
