@@ -1,30 +1,28 @@
-import time
 from twilio.jwt.access_token import AccessToken
 from twilio.jwt.access_token.grants import VideoGrant
 from twilio.rest import Client
 from flask import Flask, request
-import requests
 from twilio.twiml.messaging_response import MessagingResponse
-from datetime import datetime
+
 from apscheduler.schedulers.background import BackgroundScheduler
-
-
 
 app = Flask(__name__)
 currentMessage = 'test'
+
+
 def sendText(message):
     print('sending message')
-    account_sid = 'AC65c3a80eeee91f09f5b5dc086594be30' #get SID number
-    auth_token = '0fa5bf72afe7b8796385c52fb7ff61cb' #get your auth_token
+    account_sid = 'AC65c3a80eeee91f09f5b5dc086594be30' 
+    auth_token = '0fa5bf72afe7b8796385c52fb7ff61cb' 
     client = Client(account_sid, auth_token) 
     body = message
     message = client.messages.create(
-    body= body,
-    from_='[+][1][8329900263]', 
-    to='[+][1][9078021615]')
+        body=body,
+        from_='[+][1][8329900263]',
+        to='[+][1][9078021615]')
     print(message.sid)
 
-    
+
 def job_function():
     print('sending message')
     f = open("question.txt", "r", encoding="utf-8")
@@ -60,17 +58,13 @@ def job_function():
             return True
 
 
-
-
-
 sched = BackgroundScheduler(daemon=True)
-sched.add_job(job_function,'interval',seconds = 5)
+sched.add_job(job_function, 'interval', minutes=30)
 sched.start()
 
 
 def createToken():
     print('sunset')
-        # required for all twilio access tokens
     account_sid = 'AC65c3a80eeee91f09f5b5dc086594be30'
     api_key = 'SK0c50fe6ce0d409929bad25e7b92e0927'
     api_secret = 'pJ0cBU90MsYZ3CgHWmPmJmStUH5he9bR'
@@ -90,24 +84,26 @@ def createToken():
     return(token.to_jwt())
 
 
-#This function logs into twilio and then sends
-#This function only runs every 30 mins
+@app.route("/")
+def home():
+    return "<h1>Running Flask on Google Colab!</h1>"
 
 
-#This function handles responses
-#This function runs only when theres a response (response in the POST setting to webhook /bot)
 @app.route('/bot', methods=['POST'])
 def bot():
     incoming_msg = request.values.get('Body', '').lower()
     resp = MessagingResponse()
     msg = resp.message()
     responded = False
-    if currentMessage in incoming_msg:
+    global currentMessage
+    if currentMessage in str(incoming_msg):
         # return a quote
         msg.body('success genius!')
         responded = True
     if not responded:
         msg.body('Close... try again! Read the message over!')
     return str(resp)
+
+
 if __name__ == "__main__":
     app.run(use_reloader=False)
